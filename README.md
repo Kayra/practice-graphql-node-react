@@ -12,16 +12,15 @@ This is the code written while following a tutorial for using GraphQL with Node 
 brew update
 
 brew install node
-cd server
 npm i
 ```
 
 ### Run the server
 
-To run the server use npm in the server directory:
+To run the server use npm:
 
 ```bash
-npm run start
+npm run server
 ```
 
 The server will be running on `http://localhost:7700/`
