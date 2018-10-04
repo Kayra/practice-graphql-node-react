@@ -1,14 +1,14 @@
 {
-  "name": "graphql-node-react",
+  "name": "graphql-node",
   "version": "1.0.0",
   "description": "This is the code written while following a tutorial for using GraphQL with Node and React. Thank you to [John Kariuki](https://scotch.io/@johnkariuki) for provding the [tutorial](https://scotch.io/tutorials/implementing-graphql-using-apollo-on-an-express-server).",
-  "main": "./src/server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "NODE_PATH=./node_modules nodemon ./src/server --exec babel-node -e js",
+    "server": "nodemon ./server/src/server --exec babel-node -e js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kayra",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
