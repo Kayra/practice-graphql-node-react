@@ -26,6 +26,24 @@ The server will be running on `http://localhost:7700/`
 
 ## Example requests
 
+### Get Channels
+
+```bash
+curl --request POST \
+  --url http://localhost:7700/graphql \
+  --header 'content-type: application/json' \
+  --data '{"query":"query {\n  channels{\n    id\n    name\n  }\n}"}'
+```
+
+### Get Channel
+
+```bash
+curl --request POST \
+  --url http://localhost:7700/graphql \
+  --header 'content-type: application/json' \
+  --data '{"query":"query {\n  channel(id:2){\n    name\n  }\n}"}'
+```
+
 ### Create Channel
 
 ```bash
