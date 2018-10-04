@@ -24,7 +24,7 @@ npm i
 
 ```bash
 curl --request POST \
-  --url http://localhost:3040/ \
+  --url http://localhost:7700/ \
   --header 'content-type: application/json' \
   --data '{"query":"mutation {\n\taddChannel(name:\"lacrose\") {\n\t\tname\n\t}\n}"}'
 ```
