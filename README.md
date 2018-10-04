@@ -10,6 +10,8 @@ This is the code written while following a tutorial for using GraphQL with Node 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 
+brew install node
+npm i
 ```
 
 ## Run the server
