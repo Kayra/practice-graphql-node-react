@@ -2,8 +2,9 @@
 
 This is the code written while following a tutorial for using GraphQL with Node and React. Thank you to [John Kariuki](https://scotch.io/@johnkariuki) for provding the [tutorial](https://scotch.io/tutorials/implementing-graphql-using-apollo-on-an-express-server).
 
+## Server
 
-### Mac instructions
+### Mac installation instructions
 
 ```bash
 # Install homebrew 
@@ -11,12 +12,13 @@ This is the code written while following a tutorial for using GraphQL with Node 
 brew update
 
 brew install node
+cd server
 npm i
 ```
 
-## Run the server
+### Run the server
 
-To run the server use npm:
+To run the server use npm in the server directory:
 
 ```bash
 npm run start
@@ -24,9 +26,9 @@ npm run start
 
 The server will be running on `http://localhost:7700/`
 
-## Example requests
+### Example requests
 
-### Get Channels
+##### Get Channels
 
 ```bash
 curl --request POST \
@@ -35,7 +37,7 @@ curl --request POST \
   --data '{"query":"query {\n  channels{\n    id\n    name\n  }\n}"}'
 ```
 
-### Get Channel
+##### Get Channel
 
 ```bash
 curl --request POST \
@@ -44,7 +46,7 @@ curl --request POST \
   --data '{"query":"query {\n  channel(id:2){\n    name\n  }\n}"}'
 ```
 
-### Create Channel
+##### Create Channel
 
 ```bash
 curl --request POST \
