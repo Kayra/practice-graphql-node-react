@@ -20,3 +20,11 @@ npm i
 
 ## Example requests
 
+### Create Channel
+
+```bash
+curl --request POST \
+  --url http://localhost:3040/ \
+  --header 'content-type: application/json' \
+  --data '{"query":"mutation {\n\taddChannel(name:\"lacrose\") {\n\t\tname\n\t}\n}"}'
+```
