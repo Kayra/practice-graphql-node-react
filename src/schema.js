@@ -1,9 +1,9 @@
-import { makeExecuteableSchema } from "graphql-tools";
+import { makeExecutableSchema } from "graphql-tools";
 
 import { resolvers } from "./resolvers";
 
 
-const typeDefinitions = `
+const typeDefs = `
   
 type Channel {
     id: ID!
@@ -27,5 +27,5 @@ type Mutation {
 
 `;
 
-const schema = makeExecuteableSchema({ typeDefinitions, resolvers });
+const schema = makeExecutableSchema({ typeDefs, resolvers });
 export { schema };

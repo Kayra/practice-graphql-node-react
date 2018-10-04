@@ -16,7 +16,7 @@ export const resolvers = {
 
   Mutation: {
 
-    addChannel: (root, arguments) => {
+    addChannel: (root, args) => {
 
       let nextId = channels.length + 1;
       const newChannel = {
