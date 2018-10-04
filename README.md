@@ -16,7 +16,13 @@ npm i
 
 ## Run the server
 
+To run the server use npm:
 
+```bash
+npm run start
+```
+
+The server will be running on `http://localhost:7700/`
 
 ## Example requests
 
