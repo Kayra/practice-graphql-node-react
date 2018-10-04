@@ -13,11 +13,11 @@ server.use('*', cors({
   origin: "http://localhost:8000"
 }));
 
-server.use("/graphql", bodyParser.json(), graphiqlExpress({
+server.use("/graphql", bodyParser.json(), graphqlExpress({
   schema
 }));
 
-server.use("graphiql", graphiqlExpress({
+server.use("/graphiql", graphiqlExpress({
   endpointURL: "/graphql"
 }));
 
