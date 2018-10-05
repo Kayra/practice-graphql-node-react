@@ -1,8 +1,7 @@
 import React from "react";
-import gql from "graphql-tag";
 import { graphql } from "react-apollo";
 
-import { createChannelMutation } from "../../queries/channelQueries"
+import { createChannelMutation, channelsListQuery } from "../../queries/channelQueries"
 
 
 const CreateChannel = ({ mutate }) => {
@@ -13,7 +12,8 @@ const CreateChannel = ({ mutate }) => {
       event.persist();
 
       mutate({
-        variables: { name: event.target.value }
+        variables: { name: event.target.value },
+        refetchQueries: [{ query: channelsListQuery }]
       })
       .then( response => {
         event.target.value = "";
