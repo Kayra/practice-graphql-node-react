@@ -28,5 +28,9 @@ const ChannelsList = ({ data: { loading, error, channels }}) => {
 
 }
 
-const ChannelsListWithData = graphql(channelsListQuery)(ChannelsList);
+const options = {
+  options: { pollInterval: 2000 }
+};
+
+const ChannelsListWithData = graphql(channelsListQuery, options)(ChannelsList);
 export default ChannelsListWithData;
