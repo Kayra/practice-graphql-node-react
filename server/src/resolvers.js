@@ -38,12 +38,12 @@ export const resolvers = {
       
     },
 
-    Subscription: {
-      channelAdded: {
-        subscribe: () => pubsub.asyncIterator(CHANNEL_ADDED_TOPIC)
-      }
-    }
+  },
 
+  Subscription: {
+    channelAdded: {
+      subscribe: () => pubsub.asyncIterator(CHANNEL_ADDED_TOPIC)
+    }
   }
 
 }
