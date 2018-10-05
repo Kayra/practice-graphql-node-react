@@ -35,6 +35,9 @@
   },
   "dependencies": {
     "apollo-boost": "^0.1.16",
+    "apollo-cache-inmemory": "^1.2.10",
+    "apollo-client": "^2.4.2",
+    "apollo-link": "^1.2.3",
     "bloomer": "^0.6.3",
     "body-parser": "^1.18.3",
     "bulma": "^0.7.1",

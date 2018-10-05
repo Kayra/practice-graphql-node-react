@@ -1,5 +1,6 @@
-import React from "react";
-import { gql, graphql } from "react-apollo";
+import React, { Component } from "react";
+import gql from "graphql-tag";
+import { graphql } from "react-apollo";
 
 
 const channelsListQuery = gql`

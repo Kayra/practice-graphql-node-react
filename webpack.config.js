@@ -17,7 +17,7 @@ module.exports = function makeConfig() {
     };
 
     config.resolve = {
-      extensions: ['.js', '.jsx']
+      extensions: ['.mjs', '.js', '.jsx']
     };
 
     config.devtool = 'eval-source-map';
@@ -59,7 +59,7 @@ module.exports = function makeConfig() {
 
         new HtmlWebpackPlugin({
             template: __dirname + '/client/public/index.html',
-            inject:'body'
+            inject: 'body'
         }),
 
         new CopyWebpackPlugin([{
@@ -76,7 +76,14 @@ module.exports = function makeConfig() {
         contentBase: './client/public',
         open: true,
         overlay: true,
-        stats: 'minimal'
+        stats: 'errors-only',
+        headers: { "Access-Control-Allow-Origin": "*" }
     }
+
+    config.optimization = {
+      minimize: false
+    }
+
     return config;
+
 }();
