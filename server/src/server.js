@@ -3,6 +3,7 @@ import cors from "cors";
 import { graphqlExpress, graphiqlExpress } from "graphql-server-express";
 import bodyParser from "body-parser";
 
+import { startWebSocketServer } from "./webSocketServer";
 import { schema } from "./schema";
 
 
@@ -18,9 +19,8 @@ server.use("/graphql", bodyParser.json(), graphqlExpress({
 }));
 
 server.use("/graphiql", graphiqlExpress({
-  endpointURL: "/graphql"
+  endpointURL: "/graphql",
+  subscriptionsEndpoint: `ws://localhost:${PORT}/subscriptions`
 }));
 
-server.listen(PORT, () => 
-  console.log(`The GraphQL server is now running on http://localhost:${PORT}`)
-);
+startWebSocketServer(server, PORT, schema);
