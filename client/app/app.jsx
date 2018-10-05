@@ -18,7 +18,7 @@ let app = document.querySelector("#app");
 render(
   <ApolloProvider client={ client }>
     <div className="App">
-      <h3 className="center">React, GraphQL, Apollo</h3>
+      <h2 className="text-center">React, GraphQL, Apollo</h2>
       <div className="row">
         <div className="col-lg-4 col-lg-offset-4">
           <ChannelList />
