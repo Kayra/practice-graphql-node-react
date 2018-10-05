@@ -2,15 +2,8 @@ import React from "react";
 import gql from "graphql-tag";
 import { graphql } from "react-apollo";
 
+import { createChannelMutation } from "../../queries/channelQueries"
 
-const CreateChannelMutation = gql`
-  mutation addChannel($name: String!) {
-    addChannel(name: $name) {
-      id
-      name
-    }
-  }
-`;
 
 const CreateChannel = ({ mutate }) => {
 
@@ -40,5 +33,5 @@ const CreateChannel = ({ mutate }) => {
 
 };
 
-const CreateChannelWithMutation = graphql(CreateChannelMutation)(CreateChannel);
+const CreateChannelWithMutation = graphql(createChannelMutation)(CreateChannel);
 export default CreateChannelWithMutation;

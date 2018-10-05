@@ -1,16 +1,8 @@
 import React from "react";
-import gql from "graphql-tag";
 import { graphql } from "react-apollo";
 
+import { channelsListQuery } from "../../queries/channelQueries"
 
-const channelsListQuery = gql`
-  query ChannelsListQuery {
-    channels {
-      id
-      name
-    }
-  }
-`;
 
 const ChannelsList = ({ data: { loading, error, channels }}) => {
 
