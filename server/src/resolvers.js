@@ -1,4 +1,10 @@
-import { channels } from "./mockData"
+import { PubSub } from "graphql-subscriptions";
+
+import { channels } from "./mockData";
+
+
+const pubsub = new PubSub();
+const CHANNEL_ADDED_TOPIC = "newChannel";
 
 export const resolvers = {
 
@@ -21,13 +27,21 @@ export const resolvers = {
       let nextId = channels.length + 1;
       const newChannel = {
         id: nextId,
-        name: args.name        
+        name: args.name,
+        messages: []
       };
 
       channels.push(newChannel);
+      pubsub.publish(CHANNEL_ADDED_TOPIC, { channelAdded: newChannel });
 
       return newChannel;
       
+    },
+
+    Subscription: {
+      channelAdded: {
+        subscribe: () => pubsub.asyncIterator(CHANNEL_ADDED_TOPIC)
+      }
     }
 
   }
