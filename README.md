@@ -2,8 +2,6 @@
 
 This is the code written while following a tutorial for using GraphQL with Node and React. Thank you to [John Kariuki](https://scotch.io/@johnkariuki) for provding the [tutorial](https://scotch.io/tutorials/implementing-graphql-using-apollo-on-an-express-server).
 
-## Server
-
 ### Mac installation instructions
 
 ```bash
@@ -14,6 +12,8 @@ brew update
 brew install node
 npm i
 ```
+
+## Server
 
 ### Run the server
 
@@ -53,3 +53,15 @@ curl --request POST \
   --header 'content-type: application/json' \
   --data '{"query":"mutation {\n\taddChannel(name:\"lacrose\") {\n\t\tname\n\t}\n}"}'
 ```
+
+## Client
+
+### Run the client
+
+```bash
+npm run client
+```
+
+The client will be running at `http://localhost:8000` and can be viewed in the browser.
+
+![](./.doc_assets/application.png)
