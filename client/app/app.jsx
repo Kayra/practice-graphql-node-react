@@ -7,7 +7,7 @@ import {
 import ChannelList from "./components/ChannelList/ChannelList";
 
 
-const createNetworkInterface = createNetworkInterface({
+const networkInterface = createNetworkInterface({
   uri: "http://localhost:7700/graphql"
 });
 
